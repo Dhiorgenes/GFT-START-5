@@ -37,7 +37,7 @@ public class Main {
     }
     if(prazo > 90 && tipo == "Cheque"){
         int tempo = prazo / 30;
-        valor -=  valor * (0.03 + tempo * 0.03);
+        valor -=  valor * (0.03 *( tempo * 0.03));
         c.calcularValorRecebivel(valor);
     }
 
@@ -56,7 +56,7 @@ public class Main {
     }
     if(prazo > 90 && tipo == "Promissória"){
         int tempo = prazo / 30;
-        valor -=  valor * (0.03 + tempo * 0.02);
+        valor -=  valor * (0.03 *(tempo * 0.02));
         p.calcularValorRecebivel(valor);
     }
 
@@ -75,7 +75,7 @@ public class Main {
     }
     if(prazo > 90 && tipo == "Título do Governo"){
         int tempo = prazo / 30;
-        valor -=  valor * (0.65 + tempo * 0.01);
+        valor -=  valor * (0.65* ( tempo * 0.01));
         t.calcularValorRecebivel(valor);
     }
     
